@@ -1,5 +1,4 @@
 let val;
-/*
 // number to string
 val = String(123);
 val = String(5+5);
@@ -16,7 +15,6 @@ val = (53).toString();
 console.log(val);
 console.log(typeof val);
 console.log(val.length);
-*/
 // string to number
 val = Number('5.3009');
 

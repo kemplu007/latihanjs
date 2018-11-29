@@ -1,0 +1,27 @@
+/* CSS Document */
+.judul {
+    color: chocolate;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: lawngreen;
+    -webkit-transition: all 5s ease 0.5s;
+    -o-transition: all 5s ease 0.5s;
+    transition: all 5s ease 0.5s;
+}
+.content {
+    padding: 5px;
+    text-align: justify;
+    background-color: teal;
+    -webkit-transition: all 7s ease 0.5s;
+    -o-transition: all 7s ease 0.5s;
+    transition: all 7s ease 0.5s;
+}
+.judul:hover {
+    background-color: teal;
+    text-shadow: 4px 6px 23px #4B0102;
+    font-size: 70px;
+}
+.content:hover {
+    color: #9E4407;
+}

@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Boxy Monokai",
+    "git.ignoreLimitWarning": true,
+    "workbench.colorCustomizations": {
+        "statusBar.foreground": "#888",
+        "sideBar.foreground": "#888",
+        "activityBar.background": "#333333",
+        "activityBar.foreground": "#cccccc",
+        "activityBarBadge.background": "#007acc",
+        "editor.background": "#1E1E1E",
+        "editor.foreground": "#D4D4D4",
+        "editor.inactiveSelectionBackground": "#3A3D41",
+        "editor.selectionHighlightBackground": "#ADD6FF26",
+        "editorIndentGuide.background": "#404040",
+        "list.dropBackground": "#383B3D",
+        "list.hoverBackground": "#2a2d2d",
+        "sideBar.background": "#252525",
+        "sideBarTitle.foreground": "#BBBBBB",
+        "tab.inactiveBackground": "#2d2d2d",
+    },
+    
+}

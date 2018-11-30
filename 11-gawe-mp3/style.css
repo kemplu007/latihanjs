@@ -1,0 +1,16 @@
+body {
+    background-color: #ddd;
+}
+button {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    outline: none;
+}
+#play {
+    background-image: url('img/pause.png')
+    
+}
+#mute {
+    background-image: url('img/unmute.png')
+}

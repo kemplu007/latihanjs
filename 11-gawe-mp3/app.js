@@ -1,5 +1,5 @@
 let musik = new Audio();
-musik.src= 'audio/18AndLife.mp3'
+musik.src= 'audio/kenny-g.m4a'
 musik.loop= true;
 musik.play();
 let geser;

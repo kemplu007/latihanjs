@@ -1,16 +1,37 @@
 body {
-    background-color: #ddd;
+    background-color: aliceblue;
 }
 button {
-    height: 32px;
-    width: 32px;
+    height: 31px;
+    width: 31px;
     cursor: pointer;
     outline: none;
+    border: currentColor;
 }
 #play {
     background-image: url('img/pause.png')
     
 }
 #mute {
-    background-image: url('img/unmute.png')
+    background-image: url('img/unmute.png');
+}
+input[type="range"]{
+     -webkit-appearance: none;
+    height: 30px;
+    background: rgb(243, 139, 139);
+}
+input#musikSlider {
+    width: 200px;
+}
+input#volumeSlider {
+    width: 100px;
+}
+.kotakWaktu {
+    display: inline-block;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: -15px;
 }

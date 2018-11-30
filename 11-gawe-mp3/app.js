@@ -1,7 +1,10 @@
+let playlist = ['18AndLife.mp3', 'Breed.mp3', 'kenny-g.m4a', 'smellLike.mp3', 'theMan.mp3'];
+
+let playlist_index = 0;
 let musik = new Audio();
-musik.src= 'audio/kenny-g.m4a'
-musik.loop= true;
-musik.play();
+musik.src= 'audio/'+ playlist[playlist_index];
+musik.loop= false;
+musik.play(0);
 let geser;
  
 function mulaiAudio() {
@@ -11,7 +14,36 @@ function mulaiAudio() {
     let volumeSlider = document.getElementById('volumeSlider');
     let waktuSekarang = document.getElementById('waktuSekarang');
     let durasi = document.getElementById('durasi');
+    let sDown = document.getElementById('sDown');
+    let sUp = document.getElementById('sUp');
+
+    musik.addEventListener('ended', function(){
+        gantiTrack();
+    });
+    function gantiTrack(){
+        if (playlist_index==playlist.length-1){
+            playlist_index=0;
+        }else{
+            playlist_index++;
+        };
+        musik.src = 'audio/' + playlist[playlist_index];
+        musik.play();
+    };
+
+
+    let speed=1;
+    sDown.addEventListener('click', speedDown);
+    sUp.addEventListener('click', speedUp);
     
+    function speedDown(){
+        speed -=0.2;
+        musik.playbackRate = speed;
+    }
+    function speedUp() {
+        speed += 0.2;
+        musik.playbackRate = speed;
+    }
+
 
     play.addEventListener('click', fplay);
         mute.addEventListener('click', fmute);

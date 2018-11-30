@@ -1,5 +1,5 @@
 .container {
-    margin: 100px;
+    margin: 50px;
 }
 body {
     background-image: url(img/kenny-g.jpg);
@@ -19,6 +19,13 @@ button {
 }
 #mute {
     background-image: url('img/unmute.png');
+}
+#sDown {
+    background-image: url('img/backward.png')
+}
+
+#sUp {
+    background-image: url('img/forward.png')
 }
 input[type="range"]{
      -webkit-appearance: none;

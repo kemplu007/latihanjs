@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Boxy Tomorrow",
+    "workbench.colorTheme": "Monokai Dimmed",
     "git.ignoreLimitWarning": true,
     "workbench.colorCustomizations": {
         "statusBar.foreground": "#888",

@@ -1,11 +1,13 @@
 .container {
     margin: 50px;
 }
+
 body {
     background-image: url(img/kenny-g.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 button {
     height: 63px;
     width: 63px;
@@ -13,13 +15,15 @@ button {
     outline: none;
     border: currentColor;
 }
+
 #play {
     background-image: url('img/pause.png')
-    
 }
+
 #mute {
     background-image: url('img/unmute.png');
 }
+
 #sDown {
     background-image: url('img/backward.png')
 }
@@ -27,20 +31,24 @@ button {
 #sUp {
     background-image: url('img/forward.png')
 }
-input[type="range"]{
-     -webkit-appearance: none;
+
+input[type="range"] {
+    -webkit-appearance: none;
     height: 60px;
     border-radius: 50%;
     background: rgb(197, 211, 5);
-        outline: none;
+    outline: none;
 
 }
+
 input#musikSlider {
     width: 200px;
 }
+
 input#volumeSlider {
     width: 150px;
 }
+
 .kotakWaktu {
     display: inline-block;
     background-color: black;

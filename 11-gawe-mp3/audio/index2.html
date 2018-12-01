@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>playlist mp3</title>
+    <script>
+        function mainkanmusik() {
+            let musik = new Audio;
+            let ext = '.mp3';
+            let playlist = document.getElementById('playlist')
+
+            musik.src = '18AndLife' + ext;
+            musik.play();
+            playlist.addEventListener('change', gantiLagu);
+
+            function gantiLagu(e) {
+                musik.src = e.target.value + ext;
+                musik.play();
+            }
+        }
+        window.addEventListener('load', mainkanmusik);
+    </script>
+</head>
+
+<body>
+    <select name="" id="playlist" size="6">
+        <option value="18AndLife">18AndLife</option>
+        <option value="Breed">Breed</option>
+        <option value="TNT">TNT</option>
+        <option value="theMan">theMan</option>
+
+    </select>
+</body>
+
+</html>

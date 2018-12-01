@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>playlist</title>
+    <style>
+        .barisTrack {
+            background: salmon;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 70px;
+        }
+
+        .barisTrack:nth-child(even) {
+            background: lightsalmon;
+        }
+
+        .namaTrack {
+            float: left;
+            font-size: 25px;
+            line-height: 70px;
+        }
+
+        .tombolPlay {
+            width: 60px;
+            height: 60px;
+            display: block;
+            float: left;
+            opacity: 0.5;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background: url(../img/play.png)
+        }
+    </style>
+
+    <script>
+        function _(id) {
+            return document.getElementById(id);
+
+
+        }
+
+        function mulaiApp() {
+            let kotakMusik = _('kotakMusik');
+            let musik = new Audio();
+            let ext = '.mp3';
+            let nomor = 1;
+            let sedangPutar = false;
+            let playTrack;
+
+            let lagu = {
+                "lagu1": ['18 and life', '18AndLife'],
+                "lagu2": ['breed', 'breed'],
+                "lagu3": ['smell like than spirit', 'smellLike'],
+                "lagu4": ['the man', 'theMan'],
+                "lagu5": ['tnt', 'TNT']
+            }
+            for (let lagunya in lagu) {
+                let barisTrack = document.createElement('div');
+                let tombolPlay = document.createElement('button');
+                let namaTrack = document.createElement('div');
+
+                barisTrack.className = 'barisTrack';
+                tombolPlay.className = 'tombolPlay';
+                namaTrack.className = 'namaTrack';
+
+                namaTrack.innerHTML = nomor + '.' + lagu[lagunya][0];
+                tombolPlay.id = lagu[lagunya][1];
+
+                tombolPlay.addEventListener('click', gantiTrack);
+
+                barisTrack.appendChild(tombolPlay);
+                barisTrack.appendChild(namaTrack);
+
+                kotakMusik.appendChild(barisTrack);
+                nomor++;
+            }
+
+            function gantiTrack(e) {
+                if (sedangPutar) {
+                    if (playTrack != e.target.id) {
+                        sedangPutar = true;
+                        _(playTrack).style.background = "url(../img/play.png)";
+                        e.target.style.background = "url(../img/stop.png)";
+                        musik.src = e.target.id + ext;
+                        musik.play();
+                    } else {
+                        musik.pause();
+                        sedangPutar = false;
+                        e.target.style.background = "url(../img/play.png)";
+                    }
+                } else {
+                    sedangPutar = true;
+                    e.target.style.background = "url(../img/stop.png)";
+                    if (playTrack != e.target.id) {
+                        musik.src = e.target.id + ext
+                    }
+                    musik.play();
+
+                }
+                playTrack = e.target.id;
+            }
+            musik.addEventListener('ended', function () {
+                _(playTrack).style.background = "url(../img/play.png)";
+                playTrack = '';
+            })
+        }
+
+
+        window.addEventListener('load', mulaiApp)
+    </script>
+</head>
+
+<body>
+    <div id="kotakMusik"></div>
+</body>
+
+</html>

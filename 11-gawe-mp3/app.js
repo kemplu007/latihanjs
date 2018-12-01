@@ -1,7 +1,7 @@
 let playlist = [
   "18AndLife.mp3",
   "Breed.mp3",
-  "kenny-g.m4a",
+  "TNT.mp3",
   "smellLike.mp3",
   "theMan.mp3"
 ];
